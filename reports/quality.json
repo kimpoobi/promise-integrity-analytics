@@ -1,0 +1,22 @@
+{
+  "raw_counts": {
+    "orders": 99441,
+    "items": 112650,
+    "reviews": 99224,
+    "customers": 99441,
+    "products": 32951,
+    "sellers": 3095,
+    "translation": 71
+  },
+  "order_grain_pass": true,
+  "item_value_reconciled": true,
+  "item_value_difference_brl": 2e-06,
+  "ineligible_orders": 2971,
+  "missing_review_eligible": 646,
+  "pre_delivery_reviews": 4768,
+  "invalid_stage_eligible": 1388,
+  "extra_review_rows": 551,
+  "items_missing_product": 0,
+  "orders_missing_customer": 0,
+  "runtime_seconds": 5.26
+}

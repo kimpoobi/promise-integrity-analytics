@@ -1,0 +1,101 @@
+{
+  "source": "Olist public dataset, 2016-2018; historical snapshot",
+  "raw_orders": 99441,
+  "eligible_orders": 96470,
+  "purchase_min": "2016-09-15 12:16:38",
+  "purchase_max": "2018-08-29 15:00:37",
+  "on_time_orders": 89936,
+  "on_time_rate": 0.9322690992018244,
+  "reviewed_orders": 91056,
+  "review_coverage": 0.9438789260910128,
+  "reviewed_on_time": 89151,
+  "hidden_failure_orders": 8238,
+  "hidden_failure_rate": 0.09240502069522495,
+  "hidden_failure_ci": [
+    0.0905215572550031,
+    0.0943236086290335
+  ],
+  "poor_review_rate_late": 0.1942257217847769,
+  "p90_delivery_days": 23.09637731481482,
+  "bootstrap_gap": {
+    "difference": 0.10182070108955195,
+    "ci_low": 0.08137218041373391,
+    "ci_high": 0.12512860550020474,
+    "iterations": 1000,
+    "method": "purchase-week cluster bootstrap; association, not causation"
+  },
+  "standardization": {
+    "crude_single": 0.07505926388022457,
+    "crude_multi": 0.2468614598377958,
+    "standardized_single": 0.0748710478597771,
+    "standardized_multi": 0.24800714352666936,
+    "common_states": 18,
+    "sign_reversal": false,
+    "note": "Common-state direct standardization; no causal interpretation. Different populations for crude and standardized estimates."
+  },
+  "experiment_sample_per_arm": 3504,
+  "review_sensitivity": [
+    {
+      "group": "on_time",
+      "eligible_orders": 89936,
+      "post_delivery_review_coverage": 0.9912715708948585,
+      "post_delivery_poor_rate": 0.09240502069522495,
+      "any_timing_review_n": 89443,
+      "any_timing_poor_rate": 0.09260646445222097
+    },
+    {
+      "group": "late",
+      "eligible_orders": 6534,
+      "post_delivery_review_coverage": 0.29155188246097336,
+      "post_delivery_poor_rate": 0.1942257217847769,
+      "any_timing_review_n": 6381,
+      "any_timing_poor_rate": 0.6235699733584078
+    }
+  ],
+  "model": {
+    "splits": {
+      "train": 60309,
+      "validation": 11422,
+      "test": 11353
+    },
+    "threshold": 0.14,
+    "false_positive_cost_assumed": 3,
+    "false_negative_cost_assumed": 25,
+    "test_prevalence": 0.01788073636924161,
+    "metrics": [
+      {
+        "model": "logistic",
+        "roc_auc": 0.8281402284123792,
+        "average_precision": 0.3018613841077786,
+        "brier_score": 0.016878507103569258,
+        "assumed_error_cost_brl": 4768.0,
+        "alerts": 803,
+        "precision": 0.12079701120797011,
+        "recall": 0.47783251231527096
+      },
+      {
+        "model": "training_prevalence",
+        "roc_auc": 0.5,
+        "average_precision": 0.01788073636924161,
+        "brier_score": 0.019309246171244573,
+        "assumed_error_cost_brl": 5075.0,
+        "alerts": 0,
+        "precision": null,
+        "recall": 0.0
+      }
+    ],
+    "features": [
+      "promise_remaining_days",
+      "handling_days",
+      "item_count",
+      "seller_count",
+      "log_item_value",
+      "freight_charged_brl",
+      "mean_weight_g",
+      "interstate",
+      "customer_state",
+      "category"
+    ],
+    "limitation": "Static dataset and delivered-only population; not a production replay. Error costs are assumed, not realized savings."
+  }
+}

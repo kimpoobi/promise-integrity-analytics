@@ -1,0 +1,10 @@
+margin_assumed,recovery_brl_assumed,hidden_failure_orders,recovery_exposure_brl,negative_proxy_orders,proxy_contribution_brl,evidence
+0.1,10,8238,82380,4365,51748.78300000001,assumptions_only
+0.1,25,8238,205950,7030,-71821.21699999999,assumptions_only
+0.1,50,8238,411900,7825,-277771.217,assumptions_only
+0.2,10,8238,82380,2103,185877.56600000002,assumptions_only
+0.2,25,8238,205950,5014,62307.56600000002,assumptions_only
+0.2,50,8238,411900,7030,-143642.43399999998,assumptions_only
+0.3,10,8238,82380,1111,320006.34900000005,assumptions_only
+0.3,25,8238,205950,3534,196436.349,assumptions_only
+0.3,50,8238,411900,6001,-9513.651000000009,assumptions_only

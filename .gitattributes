@@ -1,0 +1,13 @@
+# Keep source and documentation line endings consistent across platforms.
+* text=auto eol=lf
+
+# Preserve binary deliverables byte-for-byte, including ASCII-heavy PDFs.
+*.pdf binary
+*.xlsx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.parquet binary
+*.duckdb binary

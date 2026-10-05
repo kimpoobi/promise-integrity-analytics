@@ -1,0 +1,10 @@
+{
+  "engine": "DuckDB",
+  "data": "replayed Olist analytical rows; NOT additional real orders",
+  "repeats": 20,
+  "rows": 1929400,
+  "build_seconds": 0.4787580999545753,
+  "query_seconds": 0.42573549994267523,
+  "aggregation_matches_baseline": true,
+  "environment": "single-machine local execution; timings are not portable"
+}
