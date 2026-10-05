@@ -148,9 +148,3 @@ The original delivered run recorded **15 passing tests**. A local rerun on **5 O
 - Financial scenarios use assumed margins and recovery costs. Refund amounts, internal costs, and realized savings are not observed.
 - This is historical batch analysis and retrospective modelling, with an offline dashboard. No live integration or intervention was deployed.
 - The optional Spark extension is unexecuted. No native Power BI or Tableau report is included. The Excel workbook includes formulas and a chart, but no embedded Power Query refresh or native PivotTables.
-
-## Attribution and license
-
-Independent case study using data published by Olist; not commissioned by or deployed at Olist. Implementation and documentation were developed with AI assistance.
-
-Source code is covered by [LICENSE](LICENSE). Olist data and data-derived materials have separate attribution and reuse terms described in [DATA_LICENSE.md](DATA_LICENSE.md). Bundled library notices are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
